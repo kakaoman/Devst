@@ -1,0 +1,46 @@
+TextBox.Size = UDim2.new(0, 348, 0, 120)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.TextSize = 18
+TextBox.TextWrapped = true
+TextBox.Text = 'Welcome to SH admin'
+TextBox.TextColor3 = Color3.new(1, 1, 1)
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+ 
+shadow.Name = "shadow"
+shadow.Parent = AnnGUI
+shadow.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+shadow.BorderSizePixel = 0
+shadow.Size = UDim2.new(0, 360, 0, 20)
+shadow.ZIndex = 4
+ 
+PopupText.Name = "PopupText"
+PopupText.Parent = shadow
+PopupText.BackgroundTransparency = 1
+PopupText.Position = UDim2.new(0, 51, 0, 0)
+PopupText.Size = UDim2.new(0.76, -16, 0.95, 0)
+PopupText.ZIndex = 4
+PopupText.Font = Enum.Font.SourceSans
+PopupText.TextSize = 14
+PopupText.Text = "Welcome"
+PopupText.TextColor3 = Color3.new(1, 1, 1)
+PopupText.TextWrapped = true
+ 
+Exit.Name = "Exit"
+Exit.Parent = shadow
+Exit.BackgroundTransparency = 1
+Exit.Size = UDim2.new(0, 20, 0, 20)
+Exit.ZIndex = 4
+Exit.Image = "rbxassetid://2132544126"
+ 
+wait(1)
+AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, 150), "InOut", "Quart", 0.5, true, nil)
+ 
+Exit.MouseButton1Click:Connect(function()
+    AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, -400), "InOut", "Quart", 0.5, true, nil)
+    wait(0.6)
+    AnnGUI:Destroy()
+end)
+ 
+wait(5)
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/kakaoman/name/main/Sh%20admin'),true))()
